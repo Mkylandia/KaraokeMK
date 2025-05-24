@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karaoke App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎤 Maik Karaoke App</h1>
+        
+        <div class="bluetooth-status" id="bluetoothStatus">
+            Bluetooth Status wird geprüft...
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn">🎵 Karaoke starten</button>
+            <button id="stopBtn" disabled>⏹️ Stoppen</button>
+        </div>
+        
+        <div class="status" id="status">Bereit zum Start</div>
+        
+        <div class="volume-control">
+            <label for="volumeSlider">Lautstärke: <span id="volumeValue">50</span>%</label>
+            <input type="range" id="volumeSlider" min="0" max="100" value="50">
+        </div>
+
+        <div class="echo-controls">
+            <label for="delaySlider">Echo Verzögerung: <span id="delayValue">0.3</span>s</label>
+            <input type="range" id="delaySlider" min="0" max="1" step="0.1" value="0.3">
+            
+            <label for="feedbackSlider">Echo Stärke: <span id="feedbackValue">0.3</span></label>
+            <input type="range" id="feedbackSlider" min="0" max="0.8" step="0.1" value="0.3">
+        </div>
+        
+        <div class="visualization" id="visualization"></div>
+        
+        <div class="info">
+            <strong>💡 Tipp:</strong> Verbinde dein Handy über Bluetooth mit deiner JBL Box, bevor du die App startest. Der Sound wird dann automatisch über die Box ausgegeben!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
